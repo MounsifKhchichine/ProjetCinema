@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Cinemas</title>
+<link rel="stylesheet" type=text/css
+	href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+	<h3>Liste des Cinemas</h3>
+	
+	<table class="table table-striped">
+		<tr>
+			<th>ID</th><th>Altitude</th><th>Latitude</th><th>Longitude</th><th>Name</th><th>Nombre-Salles</th>
+		</tr>
+		<tr th:each="c:${listCinemas}">
+			<td th:text="${c.id}"></td>
+			<td th:text="${c.altitude}"></td>
+			<td th:text="${c.latitude}"></td>
+			<td th:text="${c.longitude}"></td>
+			<td th:text="${c.name}"></td>
+			<td th:text="${c.nombreSalles}"></td>
+		</tr>
+	</table>
+</body>
+</html>

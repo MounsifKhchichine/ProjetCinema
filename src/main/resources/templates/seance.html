@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Seances</title>
+<link rel="stylesheet" type=text/css
+	href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+	<h3>Liste des Seances</h3>
+	
+	<table class="table table-striped">
+		<tr>
+			<th>ID</th><th>Heure_Debut</th>
+		</tr>
+		<tr th:each="se:${listSeances}">
+			<td th:text="${se.id}"></td>
+			<td th:text="${se.heureDebut}"></td>
+		</tr>
+	</table>
+</body>
+</html>

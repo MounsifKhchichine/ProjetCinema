@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Places</title>
+<link rel="stylesheet" type=text/css
+	href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+	<h3>Liste des Places</h3>
+	
+	<table class="table table-striped">
+		<tr>
+			<th>ID</th><th>Numero</th><th>Latitude</th><th>Longitude</th><th>Altitude</th>
+		</tr>
+		<tr th:each="p:${listPlaces}">
+			<td th:text="${p.id}"></td>
+			<td th:text="${p.numero}"></td>
+			<td th:text="${p.latitude}"></td>
+			<td th:text="${p.longitude}"></td>
+			<td th:text="${p.altitude}"></td>
+		</tr>
+	</table>
+</body>
+</html>

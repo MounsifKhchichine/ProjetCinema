@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Films</title>
+<link rel="stylesheet" type=text/css
+	href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+	<h3>Liste des Films</h3>
+	
+	<table class="table table-striped">
+		<tr>
+			<th>ID</th><th>Altitude</th><th>Latitude</th><th>Longitude</th><th>Name</th><th>Nombre-Salles</th>
+		</tr>
+		<tr th:each="f:${listFilms}">
+			<td th:text="${f.id}"></td>
+			<td th:text="${f.duree}"></td>
+			<td th:text="${f.realisateur}"></td>
+			<td th:text="${f.descritption}"></td>
+			<td th:text="${f.photo}"></td>
+			<td th:text="${f.dateSortie}"></td>
+		</tr>
+	</table>
+</body>
+</html>

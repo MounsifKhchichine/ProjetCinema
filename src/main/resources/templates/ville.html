@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Villes</title>
+<link rel="stylesheet" type=text/css
+	href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+	<h3>Liste des Villes</h3>
+	
+	<table class="table table-striped">
+		<tr>
+			<th>ID</th><th>Name</th><th>Altitude</th><th>Latitude</th><th>Longitude</th>
+		</tr>
+		<tr th:each="v:${listVilles}">
+			<td th:text="${v.id}"></td>
+			<td th:text="${v.name}"></td>
+			<td th:text="${v.altitude}"></td>
+			<td th:text="${v.latitude}"></td>
+			<td th:text="${v.longitude}"></td>
+		</tr>
+	</table>
+</body>
+</html>
